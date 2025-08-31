@@ -612,6 +612,75 @@ section,
   }
 }
 
+/* Section container */
+#resume-tech {
+    background-color: #1a1a1a;  /* dark section */
+    padding: 50px 20px;
+    border-radius: 12px;
+    margin: 20px 0;
+}
+
+/* Flexbox row */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* Columns */
+.column {
+    flex: 1;
+    min-width: 250px;
+}
+
+/* Resume button */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #C0C0C0; /* metallic silver */
+    color: #121212;             /* dark text */
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 500;
+    border: 2px solid #FFD700;  /* gold accent */
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #FFD700;
+    color: #121212;
+}
+
+/* Tech stack */
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.tech {
+    background-color: #2b2b2b; /* metallic card background */
+    color: #C0C0C0;            /* metallic silver text */
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    text-align: center;
+    box-shadow: 0 0 8px rgba(192,192,192,0.3);
+}
+
+/* Responsive: stack columns vertically on mobile */
+@media screen and (max-width: 768px) {
+    .row {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
