@@ -1,284 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Index - iPortfolio Bootstrap Template</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="assets/img/logo.png" rel="icon">
-  <link href="assets/img/logo.png" rel="apple-touch-icon">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <!--<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> --->
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: iPortfolio
-  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-  * Updated: Jun 29 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio with Bottom Nav</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
+<body>
 
-<body class="index-page">
-
-  <header id="header" class="header dark-background d-flex flex-column">
-    <i class="header-toggle d-xl-none bi bi-list"></i>
-
-    <div class="profile-img">
-      <img src="assets/img/my-profile-img.jpeg" alt="" class="img-fluid rounded-circle">
+  <header class="banner">
+    <img src="assets/img/hero-bg.jpeg" alt="Banner" class="banner-img">
+    <div class="banner-overlay">
+      <h1 class="banner-name">Akanksha</h1>
+      <p class="banner-sub">Data Enthusiast | ML & DL Explorer</p>
     </div>
-
-    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
-      <!-- Uncomment the line below if you also wish to use an image logo -->
-      <!-- <img src="assets/img/logo.png" alt=""> -->
-      <h1 class="sitename">Akanksha</h1>
-    </a>
-
-    <div class="social-links text-center">
-      <a href="mailto:ak.t.kree@gmail.com" class="gmail"><i class="bi bi-envelope"></i></a>
-      <a href="https://github.com/akanksha-th" class="github"><i class="bi bi-github"></i></a>
-      <a href="https://www.linkedin.com/in/akanksha--thakur/" class="linkedin"><i class="bi bi-linkedin"></i></a>
-    </div>
-
-    <nav id="navmenu" class="navmenu">
-      <ul>
-        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
-        <li><a href="#about"><i class="bi bi-person navicon"></i> Education and Experience </a></li>
-        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Portfolio</a></li>
-        <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Contact</a></li>
-      </ul>
-    </nav>
-
   </header>
 
-  <main class="main">
+  <!-- About Section -->
+  <section id="about" class="page">
+    <div class="about-container">
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>
+        Hello! I’m Akanksha, a recent graduate in <mark>Aerospace Engineering</mark> who found a compelling career path in <mark><strong>Artificial Intelligence</strong></mark>. My curiosity for algorithms began in my second year, and quickly grew into exploring how they can automate processes, uncover insights, and support decision making.
+      </p>
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
+      <p>
+        During my internship semester, I worked as a <strong>Computer Vision Research Trainee at CSIR-CSIO for 6 months</strong>, where I explored deep learning architectures - especially <strong>transformers and attention mechanisms</strong> - and <mark>co-authored a research paper (currently under review).</mark>
+      </p>
 
-      <img src="assets/img/hero-bg.jpeg" alt="" data-aos="fade-in" class="">
+      <p>
+        Beyond research, I am a self-driven learner who enjoys building <strong>end-to-end ML pipelines</strong>, <strong>predictive models</strong>, and <strong>in-depth EDA</strong> through personal projects. I thrive in dynamic environments where curiosity, problem-solving, and collaboration intersect.
+      </p>
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <h2>Akanksha</h2>
-        <p>I'm a <span class="typed" data-typed-items="Data Enthusiast, Data-Science Enthusiast, ML Enthusiast, Deep Learning Enthusiast">Designer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+      <p>
+        As I grow, my goal is to leverage <mark><strong>machine learning</strong></mark>, <mark><strong>statistical modeling</strong></mark>, and <mark><strong>deep learning</strong></mark> to create meaningful impact - in both industry and real-world applications.
+      </p>
+
+      <p>
+	Always open to connecting, collaborating, and learning something new!
+      </p>
+
       </div>
 
-    </section><!-- /Hero Section -->
-
-    <section id="resume-tech" class="section">
-      <div class="container">
-        <div class="row">
-          <!-- Left Column: Resume Download -->
-          <div class="column resume-column">
-            <h2>Resume</h2>
-            <a href="path/to/your_resume.pdf" download class="btn">Download Resume</a>
-          </div>
-    
-          <!-- Right Column: Tech Stack -->
-          <div class="column tech-column">
-            <h2>Tech Stack</h2>
-            <div class="tech-stack">
-              <!-- Example: you can fill dynamically with GitHub README tech stack -->
-              <span class="tech">Python</span>
-              <span class="tech">SQL</span>
-              <span class="tech">PyTorch</span>
-              <span class="tech">Scikit-learn</span>
-              <span class="tech">Pandas</span>
-              <span class="tech">HuggingFace</span>
-              <span class="tech">LangChain</span>
-              <span class="tech">Numpy</span>
-              <span class="tech">Git</span>
-              <span class="tech">Github</span>
-              <span class="tech">VSCode</span>
-              <span class="tech">ZenML</span>
-              <span class="tech">Dagster</span>
-              <span class="tech">Docker</span>
-              <span class="tech">MLflow</span>
-            </div>
-          </div>
+      <div class="about-sidebar">
+        <img src="assets/img/my-profile-img.jpeg" alt="Profile" class="profile-pic">
+        <div class="socials">
+          <a href="mailto:ak.t.kree@gmail.com" class="gmail"><i class="fas fa-envelope"></i> Gmail</a>
+          <a href="https://github.com/akanksha-th" target="_blank" class="github"><i class="fab fa-github"></i> Github</a>
+          <a href="https://www.linkedin.com/in/akanksha--thakur/" target="_blank" class="linkedin"><i class="fab fa-linkedin"></i> LinkedIn</a>
+          <a href="https://medium.com" target="_blank" class="medium"><i class="fab fa-medium"></i> Medium</a>
         </div>
-      </div>
-    </section>
 
-    <!-- Education Section -->
-    <section id="resume" class="resume section">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Education and Experience</h2>
-        <p>Details regarding my education and experiences.</p>
-      </div>
-    
-      <div class="container">
-        <div class="row">
-          <!-- Education Column -->
-          <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Education</h3>
-            <div class="resume-item">
-              <h4>Bachelors of Technology in Aerospace Engineering</h4>
-              <h5>2021 - Present</h5>
-              <p><em>PEC University of Technology, Chandigarh, CGPA: 8.11 (till 6th semester)</em></p>
-            </div>
-            <div class="resume-item">
-              <h4>Senior Secondary Education (12th)</h4>
-              <h5>2020 - 2021</h5>
-              <p><em>Dr. Devi Chand D.A.V Public School, Mohal, Kullu, Himachal Pradesh, Percentage: 95.6%</em></p>
-            </div>
-          </div>
-    
-          <!-- Experience Column -->
-          <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="resume-title">Experience</h3>
-            <div class="resume-item">
-              <h4>Research Trainee - Deep Learning</h4>
-              <h5>Jan 2024 - July 2024</h5>
-              <p><em>CSIR-CSIO, Chandigarh</em></p>
-              <ul>
-                <li>Research on uncooperative spacecraft pose estimation using deep learning.</li>
-                <li>Developed advanced deep learning architectures.</li>
-                <li>Performed experimentation, training, and testing.</li>
-                <li>Our work was converted to a research paper as well.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section light-background">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Portfolio</h2>
-        <p>My projects, articles, and hands-on learning work.</p>
-      </div>
-    
-      <!-- Row 1: Projects -->
-      <div class="portfolio-row">
-        <h3>Projects</h3>
-        <div class="portfolio-scroll d-flex overflow-auto">
-          <div class="portfolio-tile">
-            <img src="assets/img/portfolio/project1.png" alt="">
-            <div class="links">
-              <a href="https://github.com/akanksha-th/project1">Repo</a>
-              <a href="https://medium.com/project1-article">Blog</a>
-            </div>
-          </div>
-          <div class="portfolio-tile">
-            <img src="assets/img/portfolio/project2.png" alt="">
-            <div class="links">
-              <a href="https://github.com/akanksha-th/project2">Repo</a>
-              <a href="https://medium.com/project2-article">Blog</a>
-            </div>
-          </div>
-          <!-- Add more tiles -->
-        </div>
-      </div>
-    
-      <!-- Row 2: Medium Articles -->
-      <div class="portfolio-row">
-        <h3>Medium Articles</h3>
-        <div class="portfolio-scroll d-flex overflow-auto">
-          <div class="portfolio-tile">
-            <img src="assets/img/portfolio/article1.png" alt="">
-            <div class="links">
-              <a href="https://medium.com/article1">Blog</a>
-            </div>
-          </div>
-          <div class="portfolio-tile">
-            <img src="assets/img/portfolio/article2.png" alt="">
-            <div class="links">
-              <a href="https://medium.com/article2">Blog</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    
-      <!-- Row 3: Hands-on Learning -->
-      <div class="portfolio-row">
-        <h3>Hands-on Learning</h3>
-        <div class="portfolio-scroll d-flex overflow-auto">
-          <div class="portfolio-tile">
-            <img src="assets/img/portfolio/hands_on1.png" alt="">
-            <div class="links">
-              <a href="https://github.com/akanksha-th/hands_on1">Repo</a>
-            </div>
-          </div>
-          <div class="portfolio-tile">
-            <img src="assets/img/portfolio/hands_on2.png" alt="">
-            <div class="links">
-              <a href="https://github.com/akanksha-th/hands_on2">Repo</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- Contact Section -->
-    <section id="about" class="about contact">
-
-      <div class="container">
-        <a href="mailto:ak.t.kree@gmail.com" class="gmail">Contact Me</a>
-      </div>
-
-    </section><!-- /About Contact -->
-
-  </main>
-
-  <footer id="footer" class="footer position-relative light-background">
-
-    <div class="container">
-      <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">iPortfolio</strong> <span>All Rights Reserved</span></p>
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          <!-- Download Resume Button -->
+          <a href="assets/Akanksha.pdf" download class="resume-btn">
+              <i class="fas fa-file-download"></i> Download Resume
+          </a>
       </div>
     </div>
 
+    <!-- Contact Me Section -->
+    <div class="contact-section">
+      <h2>Contact Me</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+
+  </section>
+
+  <!-- Projects Section (with 3 subsections stacked) -->
+  <section id="projects" class="page hidden">
+    <h2>Projects</h2>
+
+    <!-- Personal Projects -->
+    <div class="sub-section">
+      <h3>Personal Projects</h3>
+      <p style="font-size: 0.9rem; color: #777; margin-top: -10px; margin-bottom: 15px;">
+    	Adding live demos soon!
+      </p>
+
+      <div class="project-grid">
+        <div class="project-card">
+	  <h4>Flight Price Prediction System</h4>
+      	    <p>Built an end-to-end ML pipeline to predict flight prices using a kaggle dataset with feature engineering and deployment.</p>
+
+	    <div class="tools">
+    		<span class="tool-label">Tools:</span>
+    		<span class="tool-tag">Python</span>
+    		<span class="tool-tag">NumPy</span>
+    		<span class="tool-tag">Pandas</span>
+    		<span class="tool-tag">Matplotlib</span>
+    		<span class="tool-tag">scikit-learn</span>
+    		<span class="tool-tag">ZenML</span>
+    		<span class="tool-tag">MLFlow</span>
+  	    </div>
+
+	    <a href="https://github.com/akanksha-th/Flight_Price_Prediction" target="_blank" class="resume-btn">View on Github</a>
+	</div>
+
+        <div class="project-card">
+	  <h4>RAG Chatbot for Common Law Awareness</h4>
+	    <p>Developed a Retrieval-Augmented Generation chatbot to provide awareness on common legal queries using LLMs.</p>
+
+	    <div class="tools">
+    		<span class="tool-label">Tools:</span>
+    		<span class="tool-tag">Python</span>
+    		<span class="tool-tag">LangCahin</span>
+    		<span class="tool-tag">Flask</span>
+  	    </div>
+
+	    <a href="https://github.com/akanksha-th/RAG_chatbot" target="_blank" class="resume-btn">View on Github</a>
+	</div>
+
+        <div class="project-card">
+	  <h4>Urban Noise Clustering</h4>
+	    <p>Unsupervised learning project to cluster urban noise patterns for noise pollution monitoring on real-life dataset.</p>
+
+	    <div class="tools">
+    		<span class="tool-label">Tools:</span>
+    		<span class="tool-tag">Python</span>
+    		<span class="tool-tag">NumPy</span>
+    		<span class="tool-tag">scikit-learn</span>
+    		<span class="tool-tag">Matplotlib</span>
+    		<span class="tool-tag">Streamlit</span>
+  	    </div>
+
+	    <a href="https://github.com/akanksha-th/Urban_Noise_Clustering" target="_blank" class="resume-btn">View on Github</a>
+
+	</div>
+      </div>
+    </div>
+
+    <!-- Articles -->
+    <div class="sub-section">
+      <h3>Articles</h3>
+      <div class="project-grid">
+
+    	<div class="project-card">
+      	  <h4>Bias-Variance Tradeoff</h4>
+      	  <p>Breaking down one of ML’s most important concepts with clear explanations.</p>
+      	  <a href="https://medium.com/@ak.t.kree/bias-variance-tradeoff-a28b1e666c57" 
+         target="_blank" class="resume-btn">Read Article</a>
+      	</div>
+
+    	<div class="project-card">
+      	  <h4>LSTM Cell Based Encoder-Decoder</h4>
+          <p>A deep dive into LSTMs and how they power sequence-to-sequence models.</p>
+      	  <a href="https://medium.com/@ak.t.kree/lstm-cell-based-encoder-decoder-682cb9878655" 
+         target="_blank" class="resume-btn">Read Article</a>
+     	</div>
+
+    	<div class="project-card">
+      	  <h4>Long Short-Term Memory (LSTM)</h4>
+      	  <p>Developing a clear understanding of LSTMs with intuition and examples.</p>
+      	  <a href="https://medium.com/@ak.t.kree/long-short-term-memory-developing-a-clear-understanding-1351cd837140" 
+         target="_blank" class="resume-btn">Read Article</a>
+    	</div>
+
+      </div>
+    </div>
+
+
+    <!-- Knowledge Base -->
+    <div class="sub-section">
+      <h3>Concepts I’m Exploring</h3>
+      <div class="project-grid">
+
+	<!-- PyTorch -->
+        <div class="project-card">
+	  <h4><strong>PyTorch</strong></h4>
+      	  <p>What I Learned:</p>
+      	  <ul>
+            <li>Tensors, autograd, and backpropagation</li>
+            <li>Building custom datasets & data loaders</li>
+            <li>Training deep learning models (CNNs, RNNs)</li>
+      	  </ul>
+      	  <p><strong>Applied In:</strong> 
+            <a href="#" target="_blank">Yet to be done</a>
+      	  </p>
+	</div>
+
+	<!-- Flask -->
+        <div class="project-card">
+	  <h4><strong>Flask</strong></h4>
+      	  <p>What I Learned:</p>
+      	  <ul>
+            <li>Handling routes, blueprints, and templates</li>
+      	  </ul>
+      	  <p><strong>Applied In:</strong> 
+            <a href="#" target="_blank">Yet to be done</a>
+      	  </p>
+	</div>
+
+	<!-- LangChain -->
+        <div class="project-card">
+	  <h4><strong>LangChain</strong></h4>
+      	  <p>What I Learned:</p>
+      	  <ul>
+            <li>Prompt chaining and orchestration</li>
+      	  </ul>
+      	  <p><strong>Applied In:</strong> 
+            <a href="#" target="_blank">Yet to be done</a>
+      	  </p>
+	</div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Bottom Navigation Bar -->
+  <div class="navbarContainer">
+    <nav class="bottomNav">
+      <a href="#about" class="navItem" data-color="#ffb74d">
+        <i class="fas fa-user"></i>
+        <small>About</small>
+      </a>
+      <a href="#projects" class="navItem" data-color="#66bb6a">
+        <i class="fas fa-briefcase"></i>
+        <small>Projects</small>
+      </a>
+    </nav>
+  </div>
+
+  <script>
+    const navItems = document.querySelectorAll(".navItem");
+    const sections = document.querySelectorAll(".page");
+
+    navItems.forEach(item => {
+      item.addEventListener("click", e => {
+        e.preventDefault();
+
+        // Reset nav styles
+        navItems.forEach(i => {
+          i.style.backgroundColor = "";
+          i.style.color = "#333";
+        });
+
+        // Highlight clicked
+        const color = item.getAttribute("data-color");
+        item.style.backgroundColor = color;
+        item.style.color = "#fff";
+
+        // Show only target section
+        const target = document.querySelector(item.getAttribute("href"));
+        if (target) {
+          sections.forEach(sec => sec.classList.add("hidden"));
+          target.classList.remove("hidden");
+        }
+      });
+    });
+  </script>
+  
+  <footer class="footer">
+    <p>© 2025 Akanksha. All Rights Reserved.</p>
   </footer>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-
 </body>
-
 </html>
