@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Akanksha — AI/ML Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --bg: #0d0c0a;
+    --bg2: #141310;
+    --bg3: #1c1a16;
+    --amber: #e8a030;
+    --amber-dim: #a06818;
+    --amber-glow: rgba(232,160,48,0.08);
+    --cream: #f0e8d8;
+    --muted: #7a7060;
+    --muted2: #4a4438;
+    --text: #e8e0d0;
+    --serif: 'Playfair Display', Georgia, serif;
+    --mono: 'DM Mono', monospace;
+    --sans: 'DM Sans', sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    font-weight: 300;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* grain overlay */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 1000;
+    opacity: 0.35;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 4rem;
+    background: rgba(13,12,10,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 0.5px solid var(--muted2);
+  }
+
+  .nav-logo {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    color: var(--cream);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+  }
+
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    color: var(--muted);
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--amber); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 8rem 4rem 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    top: -10%;
+    right: -5%;
+    width: 55%;
+    height: 80%;
+    background: radial-gradient(ellipse at center, rgba(232,160,48,0.06) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  .hero-left { padding-right: 4rem; }
+
+  .hero-eyebrow {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    color: var(--amber);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .hero-eyebrow::before {
+    content: '';
+    display: block;
+    width: 2rem;
+    height: 1px;
+    background: var(--amber);
+  }
+
+  .hero-name {
+    font-family: var(--serif);
+    font-size: clamp(3.5rem, 6vw, 5.5rem);
+    font-weight: 900;
+    color: var(--cream);
+    line-height: 1.0;
+    margin-bottom: 0.25rem;
+    letter-spacing: -0.02em;
+  }
+
+  .hero-name em {
+    font-style: italic;
+    color: var(--amber);
+  }
+
+  .hero-title {
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+    margin-bottom: 2rem;
+    padding-top: 0.5rem;
+  }
+
+  .hero-bio {
+    font-size: 1rem;
+    color: var(--text);
+    opacity: 0.75;
+    max-width: 480px;
+    margin-bottom: 2.5rem;
+    line-height: 1.8;
+  }
+
+  .hero-bio strong { color: var(--cream); font-weight: 500; opacity: 1; }
+
+  .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+  .btn-primary {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.75rem 1.75rem;
+    background: var(--amber);
+    color: var(--bg);
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: 500;
+  }
+  .btn-primary:hover { background: var(--cream); }
+
+  .btn-ghost {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.75rem 1.75rem;
+    background: transparent;
+    color: var(--amber);
+    border: 0.5px solid var(--amber-dim);
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .btn-ghost:hover { border-color: var(--amber); background: var(--amber-glow); }
+
+  /* hero right: stat block */
+  .hero-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    border-left: 0.5px solid var(--muted2);
+    padding-left: 4rem;
+  }
+
+  .stat-card {
+    background: var(--bg2);
+    border: 0.5px solid var(--muted2);
+    padding: 1.25rem 1.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.2s;
+  }
+  .stat-card:hover { border-color: var(--amber-dim); }
+  .stat-card::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 2px;
+    background: var(--amber);
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  .stat-card:hover::before { opacity: 1; }
+
+  .stat-label {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 0.35rem;
+  }
+  .stat-value {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    color: var(--cream);
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  .stat-sub {
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin-top: 0.2rem;
+  }
+
+  /* SECTION SHARED */
+  section { padding: 6rem 4rem; }
+
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 1.5rem;
+    margin-bottom: 3.5rem;
+  }
+  .section-num {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    color: var(--amber);
+    letter-spacing: 0.12em;
+  }
+  .section-title {
+    font-family: var(--serif);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--cream);
+    letter-spacing: -0.01em;
+  }
+  .section-line {
+    flex: 1;
+    height: 0.5px;
+    background: var(--muted2);
+    margin-bottom: 0.35rem;
+  }
+
+  /* PAPER SPOTLIGHT */
+  .paper-spotlight {
+    background: var(--bg2);
+    border: 0.5px solid var(--muted2);
+    padding: 2.5rem 3rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 3rem;
+    align-items: start;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 2rem;
+  }
+  .paper-spotlight::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, var(--amber), transparent);
+  }
+  .paper-badge {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--bg);
+    background: var(--amber);
+    padding: 0.3rem 0.8rem;
+    white-space: nowrap;
+    margin-top: 0.2rem;
+  }
+  .paper-venue {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    color: var(--amber);
+    letter-spacing: 0.06em;
+    margin-bottom: 0.5rem;
+  }
+  .paper-title {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    color: var(--cream);
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+  }
+  .paper-desc {
+    font-size: 0.88rem;
+    color: var(--muted);
+    line-height: 1.7;
+    max-width: 640px;
+  }
+  .paper-link {
+    display: inline-block;
+    margin-top: 1rem;
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    color: var(--amber);
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border-bottom: 0.5px solid var(--amber-dim);
+    padding-bottom: 1px;
+    transition: border-color 0.2s;
+  }
+  .paper-link:hover { border-color: var(--amber); }
+
+  /* PROJECTS GRID */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    background: var(--bg2);
+    border: 0.5px solid var(--muted2);
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.25s, transform 0.25s;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+  }
+  .project-card:hover {
+    border-color: var(--amber-dim);
+    transform: translateY(-2px);
+  }
+  .project-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at top right, rgba(232,160,48,0.04), transparent 60%);
+    pointer-events: none;
+  }
+
+  .project-card.featured {
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .card-tag {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    color: var(--amber);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .card-tag::before {
+    content: '';
+    width: 1rem;
+    height: 1px;
+    background: var(--amber);
+  }
+
+  .card-title {
+    font-family: var(--serif);
+    font-size: 1.35rem;
+    color: var(--cream);
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+  }
+
+  .card-desc {
+    font-size: 0.85rem;
+    color: var(--muted);
+    line-height: 1.75;
+    margin-bottom: 1.25rem;
+  }
+
+  .card-metrics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-bottom: 1.25rem;
+  }
+  .metric {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    color: var(--amber);
+    background: rgba(232,160,48,0.08);
+    border: 0.5px solid rgba(232,160,48,0.2);
+    padding: 0.25rem 0.65rem;
+    letter-spacing: 0.04em;
+  }
+
+  .card-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+  }
+  .stack-tag {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    color: var(--muted);
+    background: var(--bg3);
+    border: 0.5px solid var(--muted2);
+    padding: 0.2rem 0.55rem;
+    letter-spacing: 0.04em;
+  }
+
+  .card-link {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    color: var(--muted);
+    text-decoration: none;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: color 0.2s;
+  }
+  .card-link:hover { color: var(--amber); }
+  .card-link::after { content: '→'; }
+
+  /* featured card bullet list */
+  .card-bullets { list-style: none; padding: 0; }
+  .card-bullets li {
+    font-size: 0.83rem;
+    color: var(--muted);
+    line-height: 1.75;
+    padding: 0.5rem 0;
+    border-bottom: 0.5px solid var(--muted2);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.75rem;
+    align-items: start;
+  }
+  .card-bullets li:last-child { border-bottom: none; }
+  .bullet-label {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    color: var(--amber);
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+    padding-top: 0.15rem;
+  }
+
+  /* SKILLS */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--muted2);
+    border: 0.5px solid var(--muted2);
+  }
+  .skill-group {
+    background: var(--bg2);
+    padding: 1.75rem;
+  }
+  .skill-group-label {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    color: var(--amber);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .skill-group-label::after {
+    content: '';
+    flex: 1;
+    height: 0.5px;
+    background: var(--muted2);
+  }
+  .skill-items { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .skill-item {
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    color: var(--text);
+    opacity: 0.7;
+    background: var(--bg3);
+    border: 0.5px solid var(--muted2);
+    padding: 0.3rem 0.7rem;
+    transition: all 0.15s;
+  }
+  .skill-item:hover { opacity: 1; border-color: var(--amber-dim); color: var(--cream); }
+
+  /* EXPERIENCE */
+  .exp-entry {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 3rem;
+    padding: 2.5rem 0;
+    border-bottom: 0.5px solid var(--muted2);
+  }
+  .exp-entry:first-child { padding-top: 0; }
+  .exp-entry:last-child { border-bottom: none; }
+  .exp-meta { padding-top: 0.2rem; }
+  .exp-period {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    color: var(--amber);
+    letter-spacing: 0.06em;
+    margin-bottom: 0.4rem;
+  }
+  .exp-org {
+    font-size: 0.8rem;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+  .exp-role {
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    color: var(--cream);
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  .exp-bullets { list-style: none; }
+  .exp-bullets li {
+    font-size: 0.85rem;
+    color: var(--muted);
+    line-height: 1.75;
+    padding: 0.4rem 0 0.4rem 1.25rem;
+    position: relative;
+  }
+  .exp-bullets li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--amber-dim);
+  }
+  .exp-bullets strong { color: var(--cream); font-weight: 500; }
+
+  /* FOOTER */
+  footer {
+    padding: 4rem;
+    border-top: 0.5px solid var(--muted2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .footer-name {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    color: var(--cream);
+    font-weight: 700;
+  }
+  .footer-links { display: flex; gap: 2rem; }
+  .footer-links a {
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    color: var(--muted);
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .footer-links a:hover { color: var(--amber); }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .fade-up { opacity: 0; animation: fadeUp 0.7s ease forwards; }
+  .delay-1 { animation-delay: 0.1s; }
+  .delay-2 { animation-delay: 0.25s; }
+  .delay-3 { animation-delay: 0.4s; }
+  .delay-4 { animation-delay: 0.55s; }
+  .delay-5 { animation-delay: 0.7s; }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { gap: 1.5rem; }
+    .hero { grid-template-columns: 1fr; padding: 7rem 1.5rem 3rem; }
+    .hero-left { padding-right: 0; margin-bottom: 3rem; }
+    .hero-right { border-left: none; border-top: 0.5px solid var(--muted2); padding-left: 0; padding-top: 2rem; }
+    section { padding: 4rem 1.5rem; }
+    .projects-grid { grid-template-columns: 1fr; }
+    .project-card.featured { grid-column: span 1; grid-template-columns: 1fr; }
+    .skills-grid { grid-template-columns: 1fr; }
+    .exp-entry { grid-template-columns: 1fr; gap: 0.75rem; }
+    footer { flex-direction: column; gap: 1.5rem; padding: 2.5rem 1.5rem; }
+    .paper-spotlight { grid-template-columns: 1fr; gap: 1rem; padding: 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-logo">Akanksha</a>
+  <ul class="nav-links">
+    <li><a href="#work">Work</a></li>
+    <li><a href="#research">Research</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-left">
+    <div class="hero-eyebrow fade-up delay-1">AI / ML Engineer</div>
+    <h1 class="hero-name fade-up delay-2">Akan<em>ksha</em></h1>
+    <p class="hero-title fade-up delay-2">LLM Systems · Applied GenAI · Eval-first Engineering</p>
+    <p class="hero-bio fade-up delay-3">
+      I build <strong>production LLM systems</strong> with eval layers, async pipelines, and real observability — not just demos. Aerospace Engineering grad turned AI engineer, with a published paper at <strong>ICPR 2024</strong> and a strong bias for measuring what I ship.
+    </p>
+    <div class="hero-actions fade-up delay-4">
+      <a href="#work" class="btn-primary">View Projects</a>
+      <a href="https://github.com/akanksha-th" target="_blank" class="btn-ghost">GitHub</a>
+    </div>
+  </div>
+
+  <div class="hero-right fade-up delay-3">
+    <div class="stat-card">
+      <div class="stat-label">Published Research</div>
+      <div class="stat-value">ICPR 2024</div>
+      <div class="stat-sub">International Conference on Pattern Recognition</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Model Optimisation</div>
+      <div class="stat-value">2.2× faster</div>
+      <div class="stat-sub">54% training time reduction · 5% accuracy gain</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Eval-gated CI/CD</div>
+      <div class="stat-value">3 regressions</div>
+      <div class="stat-sub">caught pre-merge via DeepEval threshold gates</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Inference Latency</div>
+      <div class="stat-value">&lt;100ms</div>
+      <div class="stat-sub">p95 on cache hits · Redis TTL · RoBERTa pipeline</div>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH -->
+<section id="research" style="background: var(--bg2); padding-top: 5rem; padding-bottom: 5rem;">
+  <div class="section-header">
+    <span class="section-num">01</span>
+    <h2 class="section-title">Research</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="paper-spotlight">
+    <span class="paper-badge">Published</span>
+    <div>
+      <div class="paper-venue">ICPR 2024 · International Conference on Pattern Recognition</div>
+      <div class="paper-title">ASwin-YOLO: Attention–Swin Transformers in YOLOv7 for Air-to-Air UAV Detection</div>
+      <p class="paper-desc">
+        Replaced the YOLOv7 backbone with a Swin Transformer + LSTM attention hybrid to detect unmanned aerial vehicles in air-to-air scenarios. Achieved a 54% reduction in training time (2.2× faster) and a 5% accuracy improvement over the baseline — enabling same-day training cycles on a single GPU.
+      </p>
+      <a href="https://link.springer.com/chapter/10.1007/978-3-031-78166-7_21" target="_blank" class="paper-link">Read Paper →</a>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="work">
+  <div class="section-header">
+    <span class="section-num">02</span>
+    <h2 class="section-title">Projects</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="projects-grid">
+
+    <!-- FEATURED: Podcast RAG -->
+    <div class="project-card featured">
+      <div>
+        <div class="card-tag">Featured · Ongoing</div>
+        <h3 class="card-title">Podcast Knowledge Extraction RAG</h3>
+        <p class="card-desc">Production Telegram bot that transcribes, indexes, and enables semantic Q&A over 2–3 hour podcasts. Built with an async task queue, eval-gated CI/CD, and full observability — not a demo.</p>
+        <div class="card-metrics">
+          <span class="metric">3 regressions caught pre-merge</span>
+          <span class="metric">2× cold-start slowdown identified & fixed</span>
+          <span class="metric">Concurrent session handling</span>
+        </div>
+        <div class="card-stack">
+          <span class="stack-tag">LangGraph</span>
+          <span class="stack-tag">Qdrant</span>
+          <span class="stack-tag">ARQ</span>
+          <span class="stack-tag">Redis</span>
+          <span class="stack-tag">DeepEval</span>
+          <span class="stack-tag">Prometheus</span>
+          <span class="stack-tag">Grafana</span>
+          <span class="stack-tag">FastAPI</span>
+          <span class="stack-tag">GitHub Actions</span>
+        </div>
+        <a href="https://github.com/akanksha-th/podcast_fact_extractor_rag" target="_blank" class="card-link">View on GitHub</a>
+      </div>
+      <ul class="card-bullets">
+        <li>
+          <span class="bullet-label">Async Ingestion</span>
+          <span>ARQ + Redis task queue processes podcast audio in the background, supporting concurrent sessions without blocking the bot interface.</span>
+        </li>
+        <li>
+          <span class="bullet-label">Eval Layer</span>
+          <span>DeepEval golden dataset across faithfulness, answer relevancy, and context precision. CI/CD merges gated on threshold scores — catching 3 prompt regressions pre-merge.</span>
+        </li>
+        <li>
+          <span class="bullet-label">Observability</span>
+          <span>Prometheus + Grafana expose p95 retrieval latency and query throughput. Identified and fixed a 2× slowdown in chunk embedding on cold start.</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Sentiment API -->
+    <div class="project-card">
+      <div class="card-tag">Production API</div>
+      <h3 class="card-title">YouTube Comment Sentiment Analysis API</h3>
+      <p class="card-desc">FastAPI + RoBERTa pipeline for batch sentiment analysis at scale, with async inference and Redis caching.</p>
+      <div class="card-metrics">
+        <span class="metric">~40% latency reduction vs sequential</span>
+        <span class="metric">&lt;100ms p95 on cache hits</span>
+        <span class="metric">100+ comments / request</span>
+      </div>
+      <div class="card-stack">
+        <span class="stack-tag">FastAPI</span>
+        <span class="stack-tag">RoBERTa</span>
+        <span class="stack-tag">Redis</span>
+        <span class="stack-tag">asyncio</span>
+        <span class="stack-tag">PyTorch</span>
+      </div>
+      <a href="https://github.com/akanksha-th" target="_blank" class="card-link">View on GitHub</a>
+    </div>
+
+    <!-- Slack NL-to-SQL -->
+    <div class="project-card">
+      <div class="card-tag">LLM Application</div>
+      <h3 class="card-title">Slack NL-to-SQL Bot</h3>
+      <p class="card-desc">Slack bot that translates plain-English questions into valid PostgreSQL queries using a schema-aware LangChain prompt chain and FAISS-based semantic schema matching.</p>
+      <div class="card-metrics">
+        <span class="metric">Eliminates SQL for routine lookups</span>
+        <span class="metric">Reduced hallucinated column names</span>
+      </div>
+      <div class="card-stack">
+        <span class="stack-tag">LangChain</span>
+        <span class="stack-tag">FAISS</span>
+        <span class="stack-tag">PostgreSQL</span>
+        <span class="stack-tag">Slack API</span>
+        <span class="stack-tag">FastAPI</span>
+      </div>
+      <a href="https://github.com/akanksha-th" target="_blank" class="card-link">View on GitHub</a>
+    </div>
+
+    <!-- TedTalk -->
+    <div class="project-card">
+      <div class="card-tag">Semantic Search</div>
+      <h3 class="card-title">TedTalk Recommendation System</h3>
+      <p class="card-desc">Content-based recommender indexing 2,500+ TED Talk transcripts as dense FAISS embeddings — full transcript embeddings, not just titles — served via REST API.</p>
+      <div class="card-metrics">
+        <span class="metric">2,500+ talks indexed</span>
+        <span class="metric">Full transcript embeddings</span>
+      </div>
+      <div class="card-stack">
+        <span class="stack-tag">FAISS</span>
+        <span class="stack-tag">HuggingFace</span>
+        <span class="stack-tag">FastAPI</span>
+        <span class="stack-tag">SQLite</span>
+        <span class="stack-tag">Python</span>
+      </div>
+      <a href="https://github.com/akanksha-th/TedTalk-Recommendation-System" target="_blank" class="card-link">View on GitHub</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" style="background: var(--bg2);">
+  <div class="section-header">
+    <span class="section-num">03</span>
+    <h2 class="section-title">Stack</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="skills-grid">
+    <div class="skill-group">
+      <div class="skill-group-label">LLM / RAG</div>
+      <div class="skill-items">
+        <span class="skill-item">LangGraph</span>
+        <span class="skill-item">LangChain</span>
+        <span class="skill-item">FAISS</span>
+        <span class="skill-item">Qdrant</span>
+        <span class="skill-item">Embeddings</span>
+        <span class="skill-item">RAG Architectures</span>
+        <span class="skill-item">Prompt Engineering</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-label">Evaluation</div>
+      <div class="skill-items">
+        <span class="skill-item">DeepEval</span>
+        <span class="skill-item">Golden Dataset Design</span>
+        <span class="skill-item">CI Eval Gates</span>
+        <span class="skill-item">Faithfulness</span>
+        <span class="skill-item">Answer Relevancy</span>
+        <span class="skill-item">Context Precision</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-label">ML / DL</div>
+      <div class="skill-items">
+        <span class="skill-item">PyTorch</span>
+        <span class="skill-item">HuggingFace</span>
+        <span class="skill-item">Scikit-learn</span>
+        <span class="skill-item">YOLOv7</span>
+        <span class="skill-item">RoBERTa</span>
+        <span class="skill-item">Swin Transformer</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-label">Backend</div>
+      <div class="skill-items">
+        <span class="skill-item">FastAPI</span>
+        <span class="skill-item">Redis</span>
+        <span class="skill-item">ARQ</span>
+        <span class="skill-item">asyncio</span>
+        <span class="skill-item">PostgreSQL</span>
+        <span class="skill-item">REST APIs</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-label">MLOps</div>
+      <div class="skill-items">
+        <span class="skill-item">Docker</span>
+        <span class="skill-item">Prometheus</span>
+        <span class="skill-item">Grafana</span>
+        <span class="skill-item">GitHub Actions</span>
+        <span class="skill-item">ZenML</span>
+        <span class="skill-item">MLflow</span>
+        <span class="skill-item">structlog</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-label">Languages</div>
+      <div class="skill-items">
+        <span class="skill-item">Python</span>
+        <span class="skill-item">SQL</span>
+        <span class="skill-item">Bash</span>
+        <span class="skill-item">English (professional)</span>
+        <span class="skill-item">Hindi (native)</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-header">
+    <span class="section-num">04</span>
+    <h2 class="section-title">Experience</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="exp-entry">
+    <div class="exp-meta">
+      <div class="exp-period">Jan 2024 – Jul 2024</div>
+      <div class="exp-org">CSIR-CSIO<br/>Chandigarh, India</div>
+    </div>
+    <div>
+      <div class="exp-role">Research Trainee — Computer Vision</div>
+      <ul class="exp-bullets">
+        <li><strong>Architecture Optimisation:</strong> Replaced YOLOv7 backbone with a Swin Transformer + LSTM attention hybrid, reducing training time by <strong>54% (2.2× faster)</strong> with a 5% accuracy gain — enabling single-GPU, same-day training cycles.</li>
+        <li><strong>Published Research:</strong> Co-authored and presented findings at <strong>ICPR 2024</strong> (International Conference on Pattern Recognition); paper documents the parameter reduction and accuracy tradeoffs of the hybrid model.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="exp-entry">
+    <div class="exp-meta">
+      <div class="exp-period">Nov 2021 – May 2025</div>
+      <div class="exp-org">PEC University of Technology<br/>Chandigarh</div>
+    </div>
+    <div>
+      <div class="exp-role">B.Tech, Aerospace Engineering — GPA 7.9</div>
+      <ul class="exp-bullets">
+        <li>Non-traditional path into AI: deep-dived into ML/DL independently from second year onward; built production LLM systems as a self-driven engineer outside coursework.</li>
+        <li>Executive Body, Music Club (2022–2025) — coordinated 40+ events, led PECFEST '24 and '25; 2nd prize BITS Pilani Battle of Bands; COA & COE for top 6% contribution.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="background: var(--bg2); text-align: center;">
+  <div style="max-width: 560px; margin: 0 auto;">
+    <div style="font-family: var(--mono); font-size: 0.7rem; color: var(--amber); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 1rem;">05 · Contact</div>
+    <h2 style="font-family: var(--serif); font-size: 2.75rem; color: var(--cream); font-weight: 900; margin-bottom: 1rem; line-height: 1.1;">Let's build<br/><em style="color: var(--amber);">something real.</em></h2>
+    <p style="font-size: 0.9rem; color: var(--muted); margin-bottom: 2.5rem; line-height: 1.8;">Open to AI Engineering and Data Science roles in India. Especially interested in teams that care about eval, observability, and shipping systems that actually work.</p>
+    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+      <a href="mailto:akanksha.th.work@gmail.com" class="btn-primary">akanksha.th.work@gmail.com</a>
+      <a href="https://linkedin.com/in/akanksha--thakur" target="_blank" class="btn-ghost">LinkedIn</a>
+      <a href="https://github.com/akanksha-th" target="_blank" class="btn-ghost">GitHub</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-name">Akanksha</div>
+  <div class="footer-links">
+    <a href="https://github.com/akanksha-th" target="_blank">GitHub</a>
+    <a href="https://linkedin.com/in/akanksha--thakur" target="_blank">LinkedIn</a>
+    <a href="mailto:akanksha.th.work@gmail.com">Email</a>
+  </div>
+</footer>
+
+</body>
+</html>
