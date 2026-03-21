@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Akanksha — AI/ML Engineer</title>
+<title>Akanksha – AI/ML Engineer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
@@ -137,6 +137,7 @@
 
   .hero-name em {
     font-style: italic;
+    text-decoration: overline;
     color: var(--amber);
   }
 
@@ -639,11 +640,11 @@
 <!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-left">
-    <div class="hero-eyebrow fade-up delay-1">AI / ML Engineer</div>
+    <div class="hero-eyebrow fade-up delay-1">AI Engineer</div>
     <h1 class="hero-name fade-up delay-2">Akan<em>ksha</em></h1>
-    <p class="hero-title fade-up delay-2">LLM Systems · Applied GenAI · Eval-first Engineering</p>
+    <p class="hero-title fade-up delay-2">LLM Systems · Applied GenAI <!--· Eval-first Engineering --></p>
     <p class="hero-bio fade-up delay-3">
-      I build <strong>production LLM systems</strong> with eval layers, async pipelines, and real observability — not just demos. Aerospace Engineering grad turned AI engineer, with a published paper at <strong>ICPR 2024</strong> and a strong bias for measuring what I ship.
+      I build <strong>production LLM systems</strong> with eval layers, async pipelines, and real observability – not just demos. Aerospace Engineering grad turned AI engineer, with a published paper at <strong>ICPR 2024</strong> and a strong bias for measuring what I ship.
     </p>
     <div class="hero-actions fade-up delay-4">
       <a href="#work" class="btn-primary">View Projects</a>
@@ -689,7 +690,7 @@
       <div class="paper-venue">ICPR 2024 · International Conference on Pattern Recognition</div>
       <div class="paper-title">ASwin-YOLO: Attention–Swin Transformers in YOLOv7 for Air-to-Air UAV Detection</div>
       <p class="paper-desc">
-        Replaced the YOLOv7 backbone with a Swin Transformer + LSTM attention hybrid to detect unmanned aerial vehicles in air-to-air scenarios. Achieved a 54% reduction in training time (2.2× faster) and a 5% accuracy improvement over the baseline — enabling same-day training cycles on a single GPU.
+        Replaced the YOLOv7 backbone with a Swin Transformer + LSTM attention hybrid to detect unmanned aerial vehicles in air-to-air scenarios. Achieved a 54% reduction in training time (2.2× faster) and a 5% accuracy improvement over the baseline – enabling same-day training cycles on a single GPU.
       </p>
       <a href="https://link.springer.com/chapter/10.1007/978-3-031-78166-7_21" target="_blank" class="paper-link">Read Paper →</a>
     </div>
@@ -711,7 +712,7 @@
       <div>
         <div class="card-tag">Featured · Ongoing</div>
         <h3 class="card-title">Podcast Knowledge Extraction RAG</h3>
-        <p class="card-desc">Production Telegram bot that transcribes, indexes, and enables semantic Q&A over 2–3 hour podcasts. Built with an async task queue, eval-gated CI/CD, and full observability — not a demo.</p>
+        <p class="card-desc">Production Telegram bot that transcribes, indexes, and enables semantic Q&A over 2–3 hour podcasts. Built with an async task queue, eval-gated CI/CD, and full observability (in progress).</p>
         <div class="card-metrics">
           <span class="metric">3 regressions caught pre-merge</span>
           <span class="metric">2× cold-start slowdown identified & fixed</span>
@@ -730,7 +731,7 @@
         </div>
         <a href="https://github.com/akanksha-th/podcast_fact_extractor_rag" target="_blank" class="card-link">View on GitHub</a>
       </div>
-      <ul class="card-bullets">
+      <!-- <ul class="card-bullets">
         <li>
           <span class="bullet-label">Async Ingestion</span>
           <span>ARQ + Redis task queue processes podcast audio in the background, supporting concurrent sessions without blocking the bot interface.</span>
@@ -743,7 +744,7 @@
           <span class="bullet-label">Observability</span>
           <span>Prometheus + Grafana expose p95 retrieval latency and query throughput. Identified and fixed a 2× slowdown in chunk embedding on cold start.</span>
         </li>
-      </ul>
+      </ul> -->
     </div>
 
     <!-- Sentiment API -->
@@ -789,7 +790,7 @@
     <div class="project-card">
       <div class="card-tag">Semantic Search</div>
       <h3 class="card-title">TedTalk Recommendation System</h3>
-      <p class="card-desc">Content-based recommender indexing 2,500+ TED Talk transcripts as dense FAISS embeddings — full transcript embeddings, not just titles — served via REST API.</p>
+      <p class="card-desc">Content-based recommender indexing 2,500+ TED Talk transcripts as dense FAISS embeddings: full transcript embeddings, served via REST API.</p>
       <div class="card-metrics">
         <span class="metric">2,500+ talks indexed</span>
         <span class="metric">Full transcript embeddings</span>
@@ -896,25 +897,25 @@
 
   <div class="exp-entry">
     <div class="exp-meta">
-      <div class="exp-period">Jan 2024 – Jul 2024</div>
+      <div class="exp-period">Jan 2024 - Jul 2024</div>
       <div class="exp-org">CSIR-CSIO<br/>Chandigarh, India</div>
     </div>
     <div>
-      <div class="exp-role">Research Trainee — Computer Vision</div>
+      <div class="exp-role">Research Trainee – Computer Vision</div>
       <ul class="exp-bullets">
-        <li><strong>Architecture Optimisation:</strong> Replaced YOLOv7 backbone with a Swin Transformer + LSTM attention hybrid, reducing training time by <strong>54% (2.2× faster)</strong> with a 5% accuracy gain — enabling single-GPU, same-day training cycles.</li>
-        <li><strong>Published Research:</strong> Co-authored and presented findings at <strong>ICPR 2024</strong> (International Conference on Pattern Recognition); paper documents the parameter reduction and accuracy tradeoffs of the hybrid model.</li>
+        <li><strong>Architecture Optimisation:</strong> Replaced YOLOv7 backbone with a Swin Transformer + LSTM attention hybrid, reducing training time by <strong>54% (2.2× faster)</strong> with a 5% accuracy gain – enabling single-GPU, same-day training cycles.</li>
+        <li><strong>Published Research:</strong> Co-authored a research paper published in the <strong>ICPR 2024</strong> (International Conference on Pattern Recognition).</li>
       </ul>
     </div>
   </div>
 
   <div class="exp-entry">
     <div class="exp-meta">
-      <div class="exp-period">Nov 2021 – May 2025</div>
+      <div class="exp-period">Nov 2021 - May 2025</div>
       <div class="exp-org">PEC University of Technology<br/>Chandigarh</div>
     </div>
     <div>
-      <div class="exp-role">B.Tech, Aerospace Engineering — GPA 7.9</div>
+      <div class="exp-role">B.Tech, Aerospace Engineering – GPA 7.9</div>
       <ul class="exp-bullets">
         <li>Non-traditional path into AI: deep-dived into ML/DL independently from second year onward; built production LLM systems as a self-driven engineer outside coursework.</li>
         <li>Executive Body, Music Club (2022–2025) — coordinated 40+ events, led PECFEST '24 and '25; 2nd prize BITS Pilani Battle of Bands; COA & COE for top 6% contribution.</li>
